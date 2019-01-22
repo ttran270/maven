@@ -8,7 +8,7 @@ git config credential.helper store
 
 export VERSION="$(jx-release-version)"
 echo "Releasing version to ${VERSION}"
-
+chmod 775 /home/jenkins/.docker/config.json
 docker login -u=ttran270 -p=trananhtuan42 
 docker build -t docker.io/$ORG/$APP_NAME:${VERSION} .
 docker push docker.io/$ORG/$APP_NAME:${VERSION}
