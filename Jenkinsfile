@@ -4,7 +4,7 @@ pipeline {
     }
     environment {
         ORG         = 'ttran270'
-        APP_NAME    = 'maven_oracle'
+        APP_NAME    = 'maven_oraclejdk'
     }
     stages {
         stage('CI Build and push snapshot') {
